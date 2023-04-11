@@ -12,13 +12,7 @@
 * {
   margin: 0;
 }
-/*
-3. Allow percentage-based heights in the application
-*/
-html,
-body {
-  height: 100%;
-}
+
 /*
 Typographic tweaks!
 4. Add accessible line-height
@@ -46,22 +40,19 @@ button {
 8. Avoid text overflows
 */
 p,
-h1 {
+h2 {
   overflow-wrap: break-word;
 }
 
 body {
-  background-color: ;
-  font-family: ;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   display: grid;
   place-content: center;
-  /* r i can use the flex one 
-  display: flex;
-  justify-content:center;
-  align-items: center; */
-  padding: ;
+  padding: 5em 1.5em;
   width: 100%;
+  color: hsla(0, 0%, 100%, 0.75);
 }
 
 main {
@@ -81,7 +72,89 @@ Very dark cyan: hsl(179, 100%, 13%)
 
 Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
 Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
-font-family: 'Big Shoulders Display', cursive;
-font-family: 'Lexend Deca', sans-serif;
+font-family: 'Big Shoulders Display', cursive; 700
+font-family: 'Lexend Deca', sans-serif; 400
 
 */
+
+.orange {
+  background-color: hsl(31, 77%, 52%);
+  padding: 3.2rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.cyan {
+  background-color: hsl(184, 100%, 22%);
+  padding: 3.2rem;
+}
+.green {
+  background-color: hsl(179, 100%, 13%);
+  padding: 3.2rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.title {
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin: 1.8rem 0;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 1.5em;
+}
+
+.button {
+  background-color: hsl(0, 0%, 95%);
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.8rem 2.2rem;
+  font-size: 0.9rem;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: transparent;
+  color: inherit;
+  border: 0.15rem solid hsl(0, 0%, 95%);
+  padding: 0.65rem 2.05rem;
+}
+
+.orange1 {
+  color: hsl(31, 77%, 52%);
+}
+.cyan1 {
+  color: hsl(184, 100%, 22%);
+}
+.green1 {
+  color: hsl(179, 100%, 13%);
+}
+
+/* todo the height property on the css reset was messing with my code */
+
+@media only screen and (min-width: 700px) {
+  body {
+    padding: 12.5% 0;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    max-width: 920px;
+  }
+  p {
+    margin-bottom: 4em;
+  }
+  .orange {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .green {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+}
