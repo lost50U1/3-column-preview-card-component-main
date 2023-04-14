@@ -55,43 +55,29 @@ body {
   display: grid;
   place-content: center;
   color: hsla(0, 0%, 100%, 0.75);
+  margin: 5em 0;
 }
 
 main {
-  max-width: 375px;
+  max-width: 330px;
   width: 100%;
 }
 
-/* ## Colors
-
-### Primary
-
-Bright orange: hsl(31, 77%, 52%)
-Dark cyan: hsl(184, 100%, 22%)
-Very dark cyan: hsl(179, 100%, 13%)
-
-### Neutral
-
-Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
-Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
-font-family: 'Big Shoulders Display', cursive; 700
-font-family: 'Lexend Deca', sans-serif; 400
-
-*/
+/* boxes */
 
 .orange {
   background-color: hsl(31, 77%, 52%);
-  padding: 3.2rem;
+  padding: 3em;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
 .cyan {
   background-color: hsl(184, 100%, 22%);
-  padding: 3.2rem;
+  padding: 3em;
 }
 .green {
   background-color: hsl(179, 100%, 13%);
-  padding: 3.2rem;
+  padding: 3em;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
@@ -107,7 +93,10 @@ font-family: 'Lexend Deca', sans-serif; 400
 p {
   color: hsla(0, 0%, 100%, 0.75);
   margin-bottom: 1.5em;
+  line-height: 1.6;
 }
+
+/* button */
 
 .button {
   background-color: hsl(0, 0%, 95%);
@@ -115,6 +104,7 @@ p {
   border-radius: 1.5rem;
   padding: 0.8rem 2.2rem;
   font-size: 0.9rem;
+  font-weight: 700;
 }
 
 button:hover,
@@ -138,7 +128,12 @@ button:active {
 
 /* todo the height property on the css reset was messing with my code */
 
+/* media query */
+
 @media only screen and (min-width: 700px) {
+  body {
+    margin: 0;
+  }
   main {
     display: flex;
     justify-content: center;
@@ -146,7 +141,7 @@ button:active {
     max-width: 920px;
   }
   p {
-    margin-bottom: 4em;
+    margin-bottom: 5.93em;
   }
   .orange {
     border-top-right-radius: 0;
