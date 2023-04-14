@@ -9,7 +9,8 @@
 /*
 2. Remove default margin
 */
-* {
+html,
+body {
   margin: 0;
 }
 
@@ -44,14 +45,14 @@ h2 {
   overflow-wrap: break-word;
 }
 
+/* main css  */
+
 body {
   background-color: hsl(0, 0%, 95%);
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   display: grid;
   place-content: center;
-  padding: 5em 1.5em;
-  width: 100%;
   color: hsla(0, 0%, 100%, 0.75);
 }
 
@@ -137,10 +138,6 @@ button:active {
 /* todo the height property on the css reset was messing with my code */
 
 @media only screen and (min-width: 700px) {
-  body {
-    margin: 12% auto;
-    padding: 0;
-  }
   main {
     display: flex;
     justify-content: center;
